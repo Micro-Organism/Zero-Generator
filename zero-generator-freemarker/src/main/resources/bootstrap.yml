@@ -1,0 +1,9 @@
+server:
+    port: 8080
+spring:
+    application:
+        name: zero-generator-java
+    profiles:
+        active: dev
+mybatis-plus:
+    mapper-locations: classpath*:/mybatis/*.xml

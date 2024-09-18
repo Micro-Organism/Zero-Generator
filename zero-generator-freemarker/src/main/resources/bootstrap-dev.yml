@@ -1,0 +1,60 @@
+spring:
+    datasource:
+#        type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/zero?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+        username: root
+        password: root@123
+
+#        type: postgresql
+#        driver: com.highgo.jdbc.Driver
+#        url: jdbc:highgo://192.168.2.71:5866/highgo?useUnicode=true&characterEncoding=utf8&currentSchema=bz_transform&stringtype=unspecified
+#        username: sysdba
+#        password: HG@zh20230905
+zero:
+  #用户名称
+  author: zero
+  #包名
+  packageName: cn.zero.generator
+  #mapper
+  packageMapperName: cn.zero.generator.mapper
+  #模块名
+  tableName: system_user
+  # 自动去除表前缀，默认是false
+  autoRemovePre: false
+  # 实体类型
+  entityType: 0
+  # 表前缀（生成类名不会包含表前缀，多个用逗号分隔）
+  tablePrefix: system_
+  #生成文件路径
+  filePath: /zero-generator-java/src/main/java
+  #生成mapper文件路径
+  fileMapperPath: /zero-generator-java/src/main/resources/mapper
+  #父类实体
+  superEntityClass: cn.zero.generator.common.entity.BaseEntity
+  #父类控制器
+  superControllerClass: cn.zero.generator.common.controller.BaseController
+  #父类服务
+  superServiceClass: cn.zero.generator.common.service.BaseService
+  #父类服务实现
+  superServiceImplClass: cn.zero.generator.common.service.impl.BaseServiceImpl
+  #父类mapper
+  superMapperClass: cn.zero.generator.common.mapper.BaseMapper
+  #是否覆盖已有文件
+  fileOverride: true
+  #是否生成restful api风格
+  restful: true
+  #是否生成swagger注解
+  swagger: true
+  #是否生成lombok注解
+  lombok: true
+  #是否生成逻辑删除
+  logicDelete: true
+  #是否生成乐观锁
+  optimisticLock: true
+  #是否生成字段常量
+  columnConstant: true
+  #是否生成字段映射
+  columnMapping: true
+  #是否生成父类字段
+  superEntityColumns: id,create_time,update_time,create_user_id,update_user_id
