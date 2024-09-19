@@ -39,15 +39,24 @@
         <spring-cloud.version>2023.0.3</spring-cloud.version>
         <mysql.version>8.0.31</mysql.version>
         <mybatis.version>2.1.3</mybatis.version>
+        <mybatis-generator-maven-plugin.version>1.4.2</mybatis-generator-maven-plugin.version>
         <!--        <mybatis.version>3.0.3</mybatis.version>-->
         <mybatis-plus.version>3.1.1</mybatis-plus.version>
         <!--        <mybatis-plus.version>3.5.7</mybatis-plus.version>-->
         <mybatis-plus-generator.version>3.3.1</mybatis-plus-generator.version>
+        <mybatis-spring-boot-starter.version>3.0.3</mybatis-spring-boot-starter.version>
+        <pagehelper-spring-boot-starter.version>2.0.0</pagehelper-spring-boot-starter.version>
         <freemarker.version>2.3.32</freemarker.version>
         <velocity.version>2.3</velocity.version>
         <hutool.version>5.8.29</hutool.version>
         <highgo.version>6.2.3</highgo.version>
         <p6spy.version>3.8.5</p6spy.version>
+        <druid-spring-boot-starter.version>1.2.3</druid-spring-boot-starter.version>
+        <fastjson2.version>2.0.43</fastjson2.version>
+        <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+        <jakarta.validation-api.version>3.1.0</jakarta.validation-api.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
+        <commons-io.version>2.8.0</commons-io.version>
     </properties>
     <dependencies>
 
@@ -106,11 +115,31 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis-plus.version}</version>
         </dependency>
+        <!--    mybatis-plus-generator    -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
             <version>${mybatis-plus.version}</version>
         </dependency>
+        <!--整合mybatis依赖-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis-spring-boot-starter.version}</version>
+        </dependency>
+        <!-- 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>${pagehelper-spring-boot-starter.version}</version>
+        </dependency>
+        <!-- alibaba的druid数据库连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid-spring-boot-starter.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>p6spy</groupId>
             <artifactId>p6spy</artifactId>
@@ -129,6 +158,40 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!-- Alibaba Fastjson -->
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>${fastjson2.version}</version>
+        </dependency>
+        <!-- Java Servlet -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servlet-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>${jakarta.validation-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${validation-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

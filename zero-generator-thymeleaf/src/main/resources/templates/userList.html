@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>Hello World!</title>
+</head>
+<body>
+<h1 th:inline="text">Hello.v.2</h1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>className</th>
+    </tr>
+    <!--
+        对集合变量hello进行遍历
+    -->
+    <tr th:each="customer : ${userList}">
+        <td th:text="${customer.id}"></td>
+        <td th:text="${customer.name}"></td>
+        <td th:text="${customer.className}"></td>
+    </tr>
+</table>
+</body>
+</html>

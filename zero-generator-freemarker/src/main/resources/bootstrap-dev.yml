@@ -1,16 +1,16 @@
 spring:
-    datasource:
-#        type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/zero?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-        username: root
-        password: root@123
+  datasource:
+#      type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/zero?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      username: root
+      password: root@123
 
-#        type: postgresql
-#        driver: com.highgo.jdbc.Driver
-#        url: jdbc:highgo://192.168.2.71:5866/highgo?useUnicode=true&characterEncoding=utf8&currentSchema=bz_transform&stringtype=unspecified
-#        username: sysdba
-#        password: HG@zh20230905
+#      type: postgresql
+#      driver: com.highgo.jdbc.Driver
+#      url: jdbc:highgo://192.168.2.71:5866/highgo?useUnicode=true&characterEncoding=utf8&currentSchema=bz_transform&stringtype=unspecified
+#      username: sysdba
+#      password: HG@zh20230905
 zero:
   #用户名称
   author: zero
